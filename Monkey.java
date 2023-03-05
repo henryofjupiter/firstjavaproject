@@ -4,10 +4,11 @@ public class Monkey extends RescueAnimal {
     private String height;
     private String bodyLength;
 
-    public Monkey(String name, String species, String gender, String age,
+    public Monkey(String animalType,String species, String name, String gender, String age,
                   String weight, String tailLength, String height, String bodyLength,
                   String acquisitionDate, String acquisitionCountry, String trainingStatus,
                   boolean reserved, String inServiceCountry) {
+        setAnimalType(animalType);
         setName(name);
         setSpecies(species);
         setGender(gender);
