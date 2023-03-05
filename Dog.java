@@ -5,9 +5,10 @@ public class Dog extends RescueAnimal {
     private String breed;
 
     // Constructor
-    public Dog(String name, String breed, String gender, String age,
+    public Dog(String animalType, String name, String breed, String gender, String age,
                String weight, String acquisitionDate, String acquisitionCountry,
                String trainingStatus, boolean reserved, String inServiceCountry) {
+        setAnimalType(animalType);
         setName(name);
         setBreed(breed);
         setGender(gender);
