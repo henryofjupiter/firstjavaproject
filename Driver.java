@@ -172,62 +172,66 @@ public class Driver {
                 return;
             }
 
-            Monkey monkey1 = new Monkey();
-
             System.out.println("What is the animal type? (dog or monkey)");
             String animalType = scanner.nextLine();
 
-            System.out.println("What is the monkey's gender?");
-            String gender = scanner.nextLine();
-
-            System.out.println("What is the monkey's age?");
-            String age = scanner.nextLine();
-
-            System.out.println("What is the monkey's weight?");
-            String weight = scanner.nextLine();
-
-            System.out.println("What is the monkey's tail length?");
-            String tailLength = scanner.nextLine();
-
-            System.out.println("What is the monkey's height?");
-            String height = scanner.nextLine();
-
-            System.out.println("What is the monkey's body length?");
-            String bodyLength = scanner.nextLine();
-
-            System.out.println("What is the monkey's acquisition date?");
-            String acquisitionDate = scanner.nextLine();
-
-            System.out.println("What is the monkey's acquisition country?");
-            String acquisitionCountry = scanner.nextLine();
-
-            System.out.println("What is the monkey's training status?");
-            String trainingStatus = scanner.nextLine();
-
-            System.out.println("What is the monkey's in-service country?");
-            String inServiceCountry = scanner.nextLine();
-
-            //boolean value error when reads boolean from input
-            System.out.println("What is the monkey's reserve?");
-            String tempReserve = scanner.nextLine();
-            boolean reserve = Boolean.parseBoolean(tempReserve);
-
             monkey.setAnimalType(animalType);
-            monkey1.setAge(age);
-            monkey1.setSpecies(species);
-            monkey1.setGender(gender);
-            monkey1.setWeight(weight);
-            monkey1.setTailLength(tailLength);
-            monkey1.setHeight(height);
-            monkey1.setBodyLength(bodyLength);
-            monkey1.setAcquisitionDate(acquisitionDate);
-            monkey1.setAcquisitionLocation(acquisitionCountry);
-            monkey1.setTrainingStatus(trainingStatus);
-            monkey1.setReserved(reserve);
-            monkey1.setInServiceCountry(inServiceCountry);
-            monkeyList.add(monkey1);
 
         }
+
+        Monkey monkey1 = new Monkey();
+
+        System.out.println("What is the monkey's gender?");
+        String gender = scanner.nextLine();
+
+        System.out.println("What is the monkey's age?");
+        String age = scanner.nextLine();
+
+        System.out.println("What is the monkey's weight?");
+        String weight = scanner.nextLine();
+
+        System.out.println("What is the monkey's tail length?");
+        String tailLength = scanner.nextLine();
+
+        System.out.println("What is the monkey's height?");
+        String height = scanner.nextLine();
+
+        System.out.println("What is the monkey's body length?");
+        String bodyLength = scanner.nextLine();
+
+        System.out.println("What is the monkey's acquisition date?");
+        String acquisitionDate = scanner.nextLine();
+
+        System.out.println("What is the monkey's acquisition country?");
+        String acquisitionCountry = scanner.nextLine();
+
+        System.out.println("What is the monkey's training status?");
+        String trainingStatus = scanner.nextLine();
+
+        System.out.println("What is the monkey's in-service country?");
+        String inServiceCountry = scanner.nextLine();
+
+//        concurrent error solved. commit later
+        System.out.println("What is the monkey's reserve?");
+        boolean reserve = scanner.nextBoolean();
+
+        scanner.nextLine();
+        System.out.println("Monkey added to system successfully");
+
+        monkey1.setAge(age);
+        monkey1.setSpecies(species);
+        monkey1.setGender(gender);
+        monkey1.setWeight(weight);
+        monkey1.setTailLength(tailLength);
+        monkey1.setHeight(height);
+        monkey1.setBodyLength(bodyLength);
+        monkey1.setAcquisitionDate(acquisitionDate);
+        monkey1.setAcquisitionLocation(acquisitionCountry);
+        monkey1.setTrainingStatus(trainingStatus);
+        monkey1.setReserved(reserve);
+        monkey1.setInServiceCountry(inServiceCountry);
+        monkeyList.add(monkey1);
+
     }
 
     //reserve animal
